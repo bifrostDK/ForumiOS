@@ -1,19 +1,29 @@
-# Forum for iOS
+# ForumiOS
 A congress app that uses firebase as backend and can receive Push notifications via the Firebase 3.0 console.
 The app was made for the organisation Bifrost´s Forum 2016.
 
-<img src="https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.png?raw=true"  width="300">
-<img src="https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/myProgram.png"  width="300"> 
+![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.jpg)
+![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/myProgram.png)
 
 
-###  Language: 
+
+## Getting Started
+1. [Download](https://developer.apple.com/xcode/download/) the Xcode 8.2 release.
+2. Clone this repository.
+3. Run `sudo gem install` in a terminal to install tools and dependencies.
+4. Run `pod install` in the folder, to build and run tests on all platforms.
+5. Go to https://firebase.com and create an account. 
+6. setup an app on Firebase, download the Google-services.json file and replace the old one in the project with it.
+7. Upload youre push notification certificates from you're keychain.
+
+### Language: 
 Swift 3.0
 
-###  Device deployment 
+### Deployment version:
 iOS 9.0
 
 
-## Used cocoapods frameworks: 
+### 3rd party librarys:
 - EZSwipeController -  https://github.com/goktugyil/EZSwipeController
 - Firebase/Storage - https://cocoapods.org/?q=firebase
 - Firebase/Database - https://cocoapods.org/?q=firebase
