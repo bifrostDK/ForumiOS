@@ -2,7 +2,7 @@
 A congress app that uses firebase as backend and can receive Push notifications via the Firebase 3.0 console.
 The app was made for the organisation Bifrost´s Forum 2016.
 
-<img src="https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.jpg"  width="300">
+<img src="https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.png?raw=true"  width="300">
 <img src="https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/myProgram.png"  width="300"> 
 
 
