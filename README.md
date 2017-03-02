@@ -33,6 +33,7 @@ iOS 9.0 +
 - FirebaseStorage - https://cocoapods.org/?q=firebase
 - FirebaseMessaging - https://cocoapods.org/?q=firebase
 - AASquaresLoading - https://cocoapods.org/?q=AASquaresLoading
+- SweetAlert - https://github.com/codestergit/SweetAlert-iOS
 
 ## Developer 
 Joachim Dittman Jepsen
