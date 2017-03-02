@@ -1,5 +1,5 @@
 # ForumiOS
-A congress app that uses Firebase as backend and can receive Push notifications via the Firebase 3.0 console./n
+A congress app that uses Firebase as backend and can receive Push notifications via the Firebase 3.0 console.                      
 The app was made for the organisation Bifrost´s Forum 2016.
 
 ![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.png?raw=true)
