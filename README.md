@@ -14,6 +14,7 @@ The app was made for the organisation Bifrost´s Forum 2016.
 4. Run `pod install` in the folder, to build and run tests on all platforms.
 5. Go to https://firebase.com and create an account. 
 6. Setup an app on Firebase, download the Google-services.json file and replace the old one in the project with it.
+7. Upload the json database to Firebase 'FirebaseJsonDatabase/forumapp-4d3f7-export.json'.
 7. Upload youre push notification certificates from you're keychain.
 
 ### Language: 
