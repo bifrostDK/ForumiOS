@@ -34,6 +34,9 @@ iOS 9.0 +
 - FirebaseMessaging - https://cocoapods.org/?q=firebase
 - AASquaresLoading - https://cocoapods.org/?q=AASquaresLoading
 
+## Developer 
+Joachim Dittman Jepsen
+https://github.com/Joachimdj
  
 
 ## Everything else is under MIT licence:
