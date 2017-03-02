@@ -1,4 +1,4 @@
-# ForumiOS
+# Forum for iOS 
 A congress app that uses Firebase as backend and can receive Push notifications via the Firebase 3.0 console.                      
 The app was made for the organisation Bifrost´s Forum 2016.
 
@@ -20,7 +20,7 @@ The app was made for the organisation Bifrost´s Forum 2016.
 Swift 3.0
 
 ### Deployment version:
-iOS 9.0
+iOS 9.0 + 
 
 
 ### 3rd party librarys:
