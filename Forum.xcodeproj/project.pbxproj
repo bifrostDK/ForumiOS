@@ -36,6 +36,7 @@
 		76C334850DF324A09E072642 /* Pods_Forum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8805E8361D5B6AC800A2AF23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8805E8381D5B734C00A2AF23 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		880CE70C1F306CBF00BB85D9 /* Forum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Forum.entitlements; sourceTree = "<group>"; };
 		882982BB1D5299670080B300 /* Forum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882982BE1D5299670080B300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		882982C31D5299670080B300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		882982BD1D5299670080B300 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
+				880CE70C1F306CBF00BB85D9 /* Forum.entitlements */,
 				888851BB1D56BD6C00B3AFAD /* Util */,
 				888851B61D56BD5600B3AFAD /* Views */,
 				8888519F1D56BD1A00B3AFAD /* Models */,
@@ -206,7 +208,7 @@
 				TargetAttributes = {
 					882982BA1D5299670080B300 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7TBV2LPGS9;
+						DevelopmentTeam = 7PR3DG58P8;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -280,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F8197FBB398F9DC44CF530DD /* [CP] Embed Pods Frameworks */ = {
@@ -441,9 +443,10 @@
 			baseConfigurationReference = B9EE165682EA2BA6FCE8EA21 /* Pods-Forum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forum/Forum.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Joachim Dittman (7PR3DG58P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7TBV2LPGS9;
+				DEVELOPMENT_TEAM = 7PR3DG58P8;
 				INFOPLIST_FILE = Forum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -461,9 +464,10 @@
 			baseConfigurationReference = 91EA2442EC07C8BAB7E78F87 /* Pods-Forum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forum/Forum.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Joachim Dittman (7PR3DG58P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7TBV2LPGS9;
+				DEVELOPMENT_TEAM = 7PR3DG58P8;
 				INFOPLIST_FILE = Forum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

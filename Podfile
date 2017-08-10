@@ -10,7 +10,7 @@ pod 'Kingfisher', '~> 3.5'
 pod 'FirebaseStorage', '~> 1.1'
 pod 'FirebaseMessaging', '~> 1.2'
 pod 'AASquaresLoading', '~> 1.0'
-
+pod 'Alamofire', '~> 4.3'
 
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!

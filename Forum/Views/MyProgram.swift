@@ -51,12 +51,14 @@ class MyProgram: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
         quotesText.textAlignment = .center
         quotesText.font = UIFont (name: "HelveticaNeue", size: 18)
         quotesText.text = "Du har ikke valgt nogle \nprogrampunkter?"
+        quotesText.isUserInteractionEnabled = false
         quotesView.addSubview(quotesText)
         
         let quotesText1 = UITextView(frame: CGRect(x: 0, y: 200, width: screenWidth, height: 100))
         quotesText1.textAlignment = .center
         quotesText1.font = UIFont (name: "HelveticaNeue", size: 20)
         quotesText1.text = qArray[0]
+        quotesText1.isUserInteractionEnabled = false
         quotesView.addSubview(quotesText1)
         
         let quotesText2 = UITextView(frame: CGRect(x: 0, y:  300, width: screenWidth, height: 100))
@@ -64,6 +66,7 @@ class MyProgram: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
         quotesText2.font = UIFont (name: "HelveticaNeue-Bold", size: 40)
         quotesText2.text = aArray[0]
         quotesText2.textColor = UIColor.brown
+        quotesText2.isUserInteractionEnabled = false
         quotesView.addSubview(quotesText2)
         self.view.addSubview(quotesView)
         quotesView.alpha = 0.0

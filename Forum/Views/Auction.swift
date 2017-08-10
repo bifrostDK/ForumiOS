@@ -46,6 +46,7 @@ class Auction: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        auctionContainer = auctionContainer.sorted{$0.0.createdAt < $0.1.createdAt}
         return  auctionContainer.count
     }
     

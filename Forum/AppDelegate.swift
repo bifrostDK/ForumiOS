@@ -11,13 +11,16 @@ import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
 import SwiftyJSON
+import UserNotifications
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     var window: UIWindow?
-
-
+    var count = 0
+    var updateTimer: Timer?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
@@ -25,23 +28,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = MainView()
         window!.makeKeyAndVisible()
-        preferredStatusBarStyle()
+       _ =  preferredStatusBarStyle()
  
+      /*    NotificationCenter.default.addObserver(self, selector: #selector(reinstateBackgroundTask), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
+        updateTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self,
+                                           selector: #selector(refresh), userInfo: nil, repeats: true)
+        registerBackgroundTask()
 
+        */
         let settings: UIUserNotificationSettings =
             UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
-        
+      //  UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
     }
   
+ 
     func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.lightContent;
     }
     
+    
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
-        application.applicationIconBadgeNumber = 0
+         application.applicationIconBadgeNumber = 0
     }
     
     func registerForPushNotifications(_ application: UIApplication) {
@@ -60,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(userInfo)
         let json  = JSON(userInfo)
         
-        SweetAlert().showAlert("Besked", subTitle: "\(json["aps"]["alert"].stringValue)", style: AlertStyle.success)
+       _ =  SweetAlert().showAlert("Besked", subTitle: "\(json["aps"]["alert"].stringValue)", style: AlertStyle.success)
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
