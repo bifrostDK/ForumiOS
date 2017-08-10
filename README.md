@@ -2,8 +2,9 @@
 A congress app that uses Firebase as backend and can receive Push notifications via the Firebase 3.0 console.                      
 This app was made for the organisation Bifrost, for the event Forum 2016 in Denmark.
 
-![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/program.png?raw=true)
-![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/myProgram.png)
+![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/Dit%20program.png?raw=true)
+![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/Auktion.png?raw=true)
+![GitHub Logo](https://github.com/bifrostDK/ForumiOS/blob/master/Screenshots/Tidsplan.png?raw=true)
 
 ### Download a deployed version in the App store.
 https://itunes.apple.com/us/app/forum16/id1141696748?l=da&ls=1&mt=8
