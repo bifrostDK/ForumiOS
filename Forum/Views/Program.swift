@@ -42,9 +42,9 @@ class Program: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
         mapButton.addTarget(self, action: #selector(Program.showMap(_:)), for: UIControlEvents.touchUpInside)
         UIApplication.shared.keyWindow?.addSubview(mapButton)
   
-        let ref = FIRDatabase.database().reference()
+        let ref = Database.database().reference()
        
-        ref.child("eventDates").observe(FIRDataEventType.value, with: { (snapshot) in
+        ref.child("eventDates").observe(DataEventType.value, with: { (snapshot) in
             
             let dataString = JSON(snapshot.value!)
            
@@ -64,7 +64,7 @@ class Program: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
                     programContainer.append(ProgramObject(id: k.0, name: k.1["title"].stringValue,date:i.1["date"].stringValue, headerImage:k.1["headerImage"].stringValue,lecturer:self.lectureContainer, startTime:k.1["startTime"].stringValue ,endTime:k.1["endTime"].stringValue,desc:k.1["description"].stringValue,place:k.1["place"].stringValue,type:k.1["type"].intValue))
                     }
                 }
-               programContainer.sort{$0.0.startTime < $0.1.startTime}
+               // programContainer.sorted(by: $0.startTime < $1.startTime)
             
              dateContainer.append(dateObject(id: i.0, name: i.1["date"].stringValue, programObjects:  programContainer))
               
@@ -161,7 +161,7 @@ class Program: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
         // Dispose of any resources that can be recreated.
     }
  
-    func addFavorite(_ sender:AnyObject)
+    @objc func addFavorite(_ sender:AnyObject)
     {
         print("favorite")
         let itemString = "\(dateContainer[selectedProgram].name)\(dateContainer[selectedProgram].programObjects[sender.tag].id)"
@@ -194,7 +194,7 @@ class Program: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
     }
 
     
-    func showMap(_ sender:AnyObject)
+    @objc func showMap(_ sender:AnyObject)
     {
        mapButton.alpha = 0.0
         

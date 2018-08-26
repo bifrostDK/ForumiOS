@@ -31,11 +31,11 @@ class ViewController1: PagerController, PagerDataSource {
         
 	}
     
-    func openIntro(_ notification:Notification)
+    @objc func openIntro(_ notification:Notification)
     {
         self.present(ProgramInfo(), animated: true, completion: nil)
     }
-    func openMap(_ notification:Notification)
+    @objc func openMap(_ notification:Notification)
     {
         self.present(Map(), animated: true, completion: nil)
      

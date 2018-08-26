@@ -169,7 +169,7 @@ class MyProgram: UIViewController,UITableViewDelegate, UITableViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func removeFavorite(_ sender:AnyObject)
+    @objc func removeFavorite(_ sender:AnyObject)
     {
         print("favorite")
         let itemString = "\(favoriteContainer[sender.tag].date)\(favoriteContainer[sender.tag].id)"

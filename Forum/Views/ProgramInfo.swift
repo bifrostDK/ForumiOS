@@ -139,7 +139,10 @@ class ProgramInfo: UIViewController {
         desc.textAlignment = .left
         let attrStr = try! NSAttributedString(
             data: SP.desc.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-            options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            options: [
+                NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+                NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
+            ],
             documentAttributes: nil)
         desc.attributedText = attrStr
         desc.isEditable = false
@@ -175,12 +178,12 @@ class ProgramInfo: UIViewController {
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent;
     }
-    func close(_ sender:AnyObject)
+    @objc func close(_ sender:AnyObject)
     {
     self.dismiss(animated: true, completion: nil)
         mapButton.alpha = 1.0
     }
-    func addFavorite(_ sender:AnyObject)
+    @objc func addFavorite(_ sender:AnyObject)
     {
         print("favorite")
         let itemString = "\(SP.date)\(SP.id)"

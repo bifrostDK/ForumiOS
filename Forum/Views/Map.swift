@@ -29,8 +29,8 @@ class Map: UIViewController {
         mapButton.addTarget(self, action: #selector(Map.dismissView(_:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview(mapButton)
         
-        let ref = FIRDatabase.database().reference()
-        ref.child("mapUrl").observe(FIRDataEventType.value, with: { (snapshot) in
+        let ref = Database.database().reference()
+        ref.child("mapUrl").observe(DataEventType.value, with: { (snapshot) in
             
             let dataString =  snapshot.value!
             print(dataString)
@@ -56,7 +56,7 @@ class Map: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func dismissView(_ sender:AnyObject)
+    @objc func dismissView(_ sender:AnyObject)
     {
     self.dismiss(animated: true, completion: nil)
         mapButton.alpha = 1.0

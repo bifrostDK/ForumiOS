@@ -14,8 +14,8 @@ func loadAuctionItems()
 {
     
      DispatchQueue.global(qos: .userInitiated).async {// 1
-        let ref = FIRDatabase.database().reference()
-        ref.child("auction").observe(FIRDataEventType.value, with: { (snapshot) in
+        let ref = Database.database().reference()
+        ref.child("auction").observe(DataEventType.value, with: { (snapshot) in
             
             let dataString = JSON(snapshot.value!)
             //  print(dataString)
@@ -30,7 +30,7 @@ func loadAuctionItems()
                 
                 
             }
-            auctionContainer.sort{$0.0.createdAt < $0.1.createdAt}
+         //   auctionContainer.sorted(by:$0.createdAt < $1.createdAt)
          
             
         })

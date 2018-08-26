@@ -36,7 +36,7 @@ class Auction: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
-    func reloadTable(_ notification:Notification) {
+    @objc func reloadTable(_ notification:Notification) {
         print("reload")
         self.tableView.reloadData()
     }
@@ -46,7 +46,7 @@ class Auction: UIViewController,UITableViewDelegate, UITableViewDataSource, UISc
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        auctionContainer = auctionContainer.sorted{$0.0.createdAt < $0.1.createdAt}
+        //auctionContainer = auctionContainer.sorted(by:$0.createdAt < $0.createdAt)
         return  auctionContainer.count
     }
     

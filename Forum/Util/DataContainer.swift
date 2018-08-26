@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseStorage
 
-let storageRef = FIRStorage.storage().reference(forURL: "gs://forumapp-4d3f7.appspot.com")
+let storageRef = Storage.storage().reference(forURL: "gs://forumapp-4d3f7.appspot.com")
 let screenSize: CGRect = UIScreen.main.bounds
 let screenWidth = screenSize.width
 let screenHeight = screenSize.height

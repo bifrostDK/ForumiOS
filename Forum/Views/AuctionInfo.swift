@@ -68,10 +68,13 @@ class AuctionInfo: UIViewController {
         line = UILabel(frame: CGRect(x: 5,y: 340, width: fullCard.frame.size.width-10, height: 4))
         
         line.backgroundColor = UIColor.lightGray
-        
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+            NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
+        ]
         let attrStr = try! NSAttributedString(
             data: "Doneret af<br>\(SP.donator)".data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-            options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            options: options,
             documentAttributes: nil)
        
         who = UITextView(frame: CGRect(x: 5,y: 295, width: fullCard.frame.size.width-10, height: 50))
@@ -97,7 +100,10 @@ class AuctionInfo: UIViewController {
         desc.textAlignment = .left
         let attrStr1 = try! NSAttributedString(
             data: SP.desc.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
-            options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            options:[
+                NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+                NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
+            ],
             documentAttributes: nil)
         desc.attributedText = attrStr1
         desc.isEditable = false

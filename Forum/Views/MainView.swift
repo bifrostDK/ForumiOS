@@ -45,7 +45,7 @@ extension MainView: EZSwipeControllerDataSource {
     func viewControllerData() -> [UIViewController] {
         
         
-        return [MyProgram(), ViewController1(), Auction()]
+        return [MyProgram(), ViewController1()]
     }
     
     func navigationBarDataForPageIndex(_ index: Int) -> UINavigationBar {
@@ -62,7 +62,7 @@ extension MainView: EZSwipeControllerDataSource {
         navigationBar.barStyle = UIBarStyle.default
         navigationBar.barTintColor = UIColor(red: 142.0/255, green: 122.0/255, blue: 183.0/255, alpha: 1.0)
         
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationBar.titleTextAttributes = [kCTForegroundColorAttributeName: UIColor.white] as [NSAttributedStringKey : Any]
         
         
         let navigationItem = UINavigationItem(title: title)
